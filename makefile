@@ -6,8 +6,7 @@ README.md: guessinggame.sh
 	echo "Number of lines in the source file(s):" >> README.md
 	wc -l guessinggame.sh | egrep --only-matching "[0-9]+" >> README.md
 	echo >> README.md
-	echo "File generated at:" >> README.md
-	date >> README.md
+	echo "File generated at: `date`" >> README.md
 
 clean:
 	rm README.md  

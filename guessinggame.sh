@@ -16,13 +16,9 @@ function compare {
 match=-1
 filesInDir=$(ls -A | wc -l)
 
-# intro
-echo "Welcome to the game! You need to guess on how many files are in the current directory ($PWD)"
-echo "(!) 'how many files' means both files and directories, but excluding files from child dirs. Type any key to confirm you are ready to START..."
-read ack
+echo "Welcome to the game!"
+echo "Please guess how many files are in the current directory ($PWD)..."
 
-# main dialog
-echo "So, it's time for your 1st guess..."
 while [[ $match != 0 ]]; do
     read guess
     let match=$(compare $guess $filesInDir)
